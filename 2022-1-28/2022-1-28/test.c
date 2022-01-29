@@ -72,60 +72,60 @@
 //}
 
 //3
-//char* my_strcpy(char* dis, const char* str)
-//{
-//	char* ret = dis;
-//	assert(dis && str);
-//	while (*dis++ = *str++)			//'\0'的ASCLL码值为0
-//	{
-//		;
-//	}
-//	return ret;
-//}
-//int main()
-//{
-//	//写一个函数，实现字符拷贝
-//	char arr1[20] = { 0 };
-//	char arr2[] = "hello,bit";
-//	printf("%s\n", my_strcpy(arr1, arr2));
-//	return 0;
-//}
-
-void test1()
+char* my_strcpy(char* dis, const char* str)
 {
-	int n = 10;
-	int m = 20;
-	int* p = &n;
-	*p = 20;	//ok?
-	p = &m;		//ok?
-}
-void test2()
-{
-	int n = 10;
-	int m = 20;
-	const int* p = &n;
-	*p = 20;	//ok?
-	p = &m;		//ok?
-}
-void test3()
-{
-	int n = 10;
-	int m = 20;
-	int* const p = &n;
-	*p = 20;	//ok?
-	p = &m;		//ok?
+	char* ret = dis;
+	assert(dis && str);
+	while (*dis++ = *str++)			//'\0'的ASCLL码值为0
+	{
+		;
+	}
+	return ret;
 }
 int main()
 {
-//对const（常变量）的认识
-//const放在*的左边：const修饰指针指向的内容，表示指针指向的内容不能通过指针来改变，但是指针变量本身是可以改变的
-//const放在*的右边：const修饰指针变量本身，指针变量的内容不能被修改，但是指针指向的内容是可以通过指针来改变的
-	
-	//测试无const的函数
-	test1();
-	//测试const放在*的左边
-	test2();
-	//测试const放在*的右边
-	test3();
+	//写一个函数，实现字符拷贝
+	char arr1[20] = { 0 };
+	char arr2[] = "hello,bit";
+	printf("%s\n", my_strcpy(arr1, arr2));
 	return 0;
 }
+
+//void test1()
+//{
+//	int n = 10;
+//	int m = 20;
+//	int* p = &n;
+//	*p = 20;	//ok?
+//	p = &m;		//ok?
+//}
+//void test2()
+//{
+//	int n = 10;
+//	int m = 20;
+//	const int* p = &n;
+//	*p = 20;	//ok?
+//	p = &m;		//ok?
+//}
+//void test3()
+//{
+//	int n = 10;
+//	int m = 20;
+//	int* const p = &n;
+//	*p = 20;	//ok?
+//	p = &m;		//ok?
+//}
+//int main()
+//{
+////对const（常变量）的认识
+////const放在*的左边：const修饰指针指向的内容，表示指针指向的内容不能通过指针来改变，但是指针变量本身是可以改变的
+////const放在*的右边：const修饰指针变量本身，指针变量的内容不能被修改，但是指针指向的内容是可以通过指针来改变的
+//	
+//	//测试无const的函数
+//	test1();
+//	//测试const放在*的左边
+//	test2();
+//	//测试const放在*的右边
+//	test3();
+//	return 0;
+//}
